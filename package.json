@@ -1,5 +1,5 @@
 {
-  "name": "hello",
+  "name": "expenses",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,14 +8,19 @@
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "sass": "^1.58.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "playwright_test": "playwright test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-app": "npm start",
+    "start-api": "cd api && func start",
+    "start-swa": "swa start http://localhost:3000/ --api-location api",
+    "start-all": "concurrently \"npm:start-app\" \"npm:start-swa\" "
   },
   "eslintConfig": {
     "extends": "react-app"
